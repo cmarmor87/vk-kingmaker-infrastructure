@@ -1,4 +1,4 @@
-const ATHANOR_STRUCTURES = [
+const VK_STRUCTURES = [
   {
     "id": "planning-office",
     "name": "Planning Office",
@@ -137,8 +137,8 @@ const ATHANOR_STRUCTURES = [
   }
 ];
 
-const MODULE_ID = "athanor-structures";
-const PACK_NAME = "athanor-custom-structures";
+const MODULE_ID = "vk-kingmaker-infrastructure";
+const PACK_NAME = "vk-infrastructure-structures";
 const COMPENDIUM_KEY = `${MODULE_ID}.${PACK_NAME}`;
 const IMG_PATH = `modules/${MODULE_ID}/img`;
 
@@ -154,12 +154,12 @@ const STRUCTURE_IMAGES = {
 };
 
 Hooks.once("init", () => {
-  console.log("Athanor Structures | Initializing custom infrastructure structures");
+  console.log("V&K Infrastructure | Initializing custom infrastructure structures");
 });
 
 Hooks.once("ready", async () => {
   if (!game.modules.get("pf2e-kingmaker-tools")?.active) {
-    ui.notifications.warn("Athanor Structures requires pf2e-kingmaker-tools to be active.");
+    ui.notifications.warn("V&K Infrastructure requires pf2e-kingmaker-tools to be active.");
     return;
   }
 
@@ -167,7 +167,7 @@ Hooks.once("ready", async () => {
 
   const pack = game.packs.get(COMPENDIUM_KEY);
   if (!pack) {
-    console.warn("Athanor Structures | Compendium pack not found:", COMPENDIUM_KEY);
+    console.warn("V&K Infrastructure | Compendium pack not found:", COMPENDIUM_KEY);
     return;
   }
 
@@ -177,13 +177,13 @@ Hooks.once("ready", async () => {
   try {
     const existingDocs = await pack.getDocuments();
     const existingIds = new Set(existingDocs.map(d => d.flags?.["pf2e-kingmaker-tools"]?.structureData?.id).filter(Boolean));
-    const missing = ATHANOR_STRUCTURES.filter(s => !existingIds.has(s.id));
+    const missing = VK_STRUCTURES.filter(s => !existingIds.has(s.id));
 
     if (missing.length > 0) {
-      console.log(`Athanor Structures | Adding ${missing.length} structure(s) to compendium...`);
+      console.log(`V&K Infrastructure | Adding ${missing.length} structure(s) to compendium...`);
       await populateCompendium(pack, missing);
     } else {
-      console.log("Athanor Structures | Compendium up to date with", existingDocs.length, "structures.");
+      console.log("V&K Infrastructure | Compendium up to date with", existingDocs.length, "structures.");
     }
 
     // Update images on existing actors that still use the default icon
@@ -192,7 +192,7 @@ Hooks.once("ready", async () => {
       const correctImg = STRUCTURE_IMAGES[structId];
       if (correctImg && doc.img !== correctImg) {
         await doc.update({ img: correctImg, "prototypeToken.texture.src": correctImg });
-        console.log(`Athanor Structures | Updated image for ${doc.name}`);
+        console.log(`V&K Infrastructure | Updated image for ${doc.name}`);
       }
     }
   } finally {
@@ -218,10 +218,10 @@ async function populateCompendium(pack, structures) {
 
     try {
       await Actor.create(actorData, { pack: COMPENDIUM_KEY });
-      console.log(`Athanor Structures | Created structure actor: ${structure.name}`);
+      console.log(`V&K Infrastructure | Created structure actor: ${structure.name}`);
     } catch (err) {
-      console.error(`Athanor Structures | Failed to create ${structure.name}:`, err);
+      console.error(`V&K Infrastructure | Failed to create ${structure.name}:`, err);
     }
   }
-  ui.notifications.info(`Athanor Structures | Created ${structures.length} custom infrastructure structures in the compendium.`);
+  ui.notifications.info(`V&K Infrastructure | Created ${structures.length} custom infrastructure structures in the compendium.`);
 }

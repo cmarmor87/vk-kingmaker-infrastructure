@@ -1,8 +1,8 @@
-packs/athanor-custom-structures/*.ldb
-packs/athanor-custom-structures/*.log
-packs/athanor-custom-structures/CURRENT
-packs/athanor-custom-structures/LOCK
-packs/athanor-custom-structures/LOG
-packs/athanor-custom-structures/LOG.old
-packs/athanor-custom-structures/MANIFEST-*
-packs/athanor-custom-structures/lost/
+packs/vk-infrastructure-structures/*.ldb
+packs/vk-infrastructure-structures/*.log
+packs/vk-infrastructure-structures/CURRENT
+packs/vk-infrastructure-structures/LOCK
+packs/vk-infrastructure-structures/LOG
+packs/vk-infrastructure-structures/LOG.old
+packs/vk-infrastructure-structures/MANIFEST-*
+packs/vk-infrastructure-structures/lost/

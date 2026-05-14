@@ -1,6 +1,6 @@
-# Athanor Custom Structures
+# V&K Kingmaker Infrastructure Module
 
-Custom infrastructure structures for the Kingdom of Athanor, designed for use with **pf2e-kingmaker-tools** and the **V&K Remastered** kingdom building rules.
+Custom infrastructure structures for Pathfinder 2E Kingmaker using **V&K Remastered** kingdom building rules, designed for use with **pf2e-kingmaker-tools**.
 
 ## Structures
 
@@ -24,22 +24,31 @@ Custom infrastructure structures for the Kingdom of Athanor, designed for use wi
 
 ## Installation
 
-1. Copy the `athanor-structures` folder into your Foundry VTT `Data/modules/` directory
-2. In Foundry, go to **Settings > Manage Modules** and enable **Athanor Custom Structures**
-3. Make sure **pf2e-kingmaker-tools** is also enabled
+In Foundry VTT, go to **Add-on Modules > Install Module** and paste this manifest URL:
+
+```
+https://github.com/cmarmor87/vk-kingmaker-infrastructure/releases/latest/download/module.json
+```
+
+### Manual Installation
+
+1. Download the latest release zip from the [Releases](https://github.com/cmarmor87/vk-kingmaker-infrastructure/releases) page
+2. Extract into your Foundry VTT `Data/modules/` directory
+3. In Foundry, go to **Settings > Manage Modules** and enable **V&K Kingmaker Infrastructure Module**
+4. Make sure **pf2e-kingmaker-tools** is also enabled
 
 ## Usage
 
 ### Method 1: Compendium Drag & Drop
 1. Open the **Compendium Packs** tab in the sidebar
-2. Find **Athanor Custom Structures** under the folder
+2. Find **V&K Infrastructure Structures** under the **V&K Kingmaker Infrastructure** folder
 3. Drag the structure actor onto your settlement scene
 4. The structure will be recognized by pf2e-kingmaker-tools automatically
 
 The compendium is auto-populated the first time the GM loads a world with this module active.
 
 ### Method 2: Edit Structure Rules Macro
-You can also add these structures via the **Edit Structure Rules** macro from pf2e-kingmaker-tools. Use the structure JSON from `scripts/module.js` (the `ATHANOR_STRUCTURES` array).
+You can also add these structures via the **Edit Structure Rules** macro from pf2e-kingmaker-tools. Use the structure JSON from `scripts/module.js` (the `VK_STRUCTURES` array).
 
 ## Requirements
 
