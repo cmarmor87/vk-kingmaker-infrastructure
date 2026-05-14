@@ -12,7 +12,8 @@ const VK_STRUCTURES = [
       "lumber": 1
     },
     "activityBonusRules": [
-      {"value": 1, "activity": "repair-reputation-decay"}
+      {"value": 1, "activity": "repair-reputation-decay"},
+      {"value": 1, "activity": "accelerate-project"}
     ]
   },
   {
@@ -78,7 +79,8 @@ const VK_STRUCTURES = [
       "stone": 1
     },
     "activityBonusRules": [
-      {"value": 2, "activity": "repair-reputation-decay"}
+      {"value": 2, "activity": "repair-reputation-decay"},
+      {"value": 2, "activity": "accelerate-project"}
     ]
   },
   {
