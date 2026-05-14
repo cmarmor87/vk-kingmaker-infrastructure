@@ -1,0 +1,68 @@
+{
+  "id": "athanor-structures",
+  "title": "V&K Kingmaker Infrastructure Module",
+  "description": "Custom infrastructure structures for Pathfinder 2E Kingmaker using V&K Remastered kingdom building rules. Includes Planning Office, Publicity Office, Town Square, Town Watch, and their upgraded variants.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "14",
+    "maximum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Chris McDaniel",
+      "flags": {}
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "7.5.0"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "pf2e-kingmaker-tools",
+        "type": "module",
+        "compatibility": {
+          "minimum": "6.0.0"
+        }
+      }
+    ]
+  },
+  "scripts": [
+    "scripts/module.js"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "athanor-custom-structures",
+      "label": "V&K Infrastructure Structures",
+      "path": "packs/athanor-custom-structures",
+      "type": "Actor",
+      "system": "pf2e",
+      "private": false,
+      "flags": {},
+      "banner": "systems/pf2e/assets/compendium-banner/red.webp"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "V&K Kingmaker Infrastructure",
+      "sorting": "a",
+      "packs": [
+        "athanor-custom-structures"
+      ]
+    }
+  ]
+}

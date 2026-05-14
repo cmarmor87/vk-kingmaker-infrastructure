@@ -1,0 +1,16 @@
+{
+  "athanor-structures": {
+    "planning-office": {
+      "name": "Planning Office"
+    },
+    "publicity-office": {
+      "name": "Publicity Office"
+    },
+    "town-square": {
+      "name": "Town Square"
+    },
+    "town-watch": {
+      "name": "Town Watch"
+    }
+  }
+}

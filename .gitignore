@@ -1,0 +1,8 @@
+packs/athanor-custom-structures/*.ldb
+packs/athanor-custom-structures/*.log
+packs/athanor-custom-structures/CURRENT
+packs/athanor-custom-structures/LOCK
+packs/athanor-custom-structures/LOG
+packs/athanor-custom-structures/LOG.old
+packs/athanor-custom-structures/MANIFEST-*
+packs/athanor-custom-structures/lost/
