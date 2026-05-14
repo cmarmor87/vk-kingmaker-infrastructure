@@ -14,6 +14,9 @@
       "flags": {}
     }
   ],
+  "url": "https://github.com/cmarmor87/vk-kingmaker-infrastructure",
+  "manifest": "https://github.com/cmarmor87/vk-kingmaker-infrastructure/releases/latest/download/module.json",
+  "download": "https://github.com/cmarmor87/vk-kingmaker-infrastructure/releases/download/v1.0.0/athanor-structures.zip",
   "relationships": {
     "systems": [
       {
